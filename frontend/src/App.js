@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
-
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import DrawerUndockedExample from './components/Drawer';
+import {connect} from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getComponent from './utils/getComponent';
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+    render() {
+        return (
+            <Router>
+                <MuiThemeProvider>
+                    <div className="App">
+                        <DrawerUndockedExample/>
+                        {/*<Route path="/posts/:postId" component={PostDetailed}/>*/}
+                        {/*<Route path="/find" component={getComponent('new')}/>*/}
+                        {/*<Route path="/history" component={getComponent('comments')}/>*/}
+                        <Route exact path="/" component={getComponent('mainPage')}/>
+                        {/*<Route path="/ask" component={getComponent('ask')}/>*/}
+                        {/*<Route path="/jobs" component={getComponent('jobs')}/>*/}
+                    </div>
+                </MuiThemeProvider>
+            </Router>
+        );
+
+    }
 }
 
-export default App;
+export default connect()(App);
