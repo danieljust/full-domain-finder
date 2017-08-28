@@ -1,5 +1,5 @@
 const bunyan = require('bunyan');
-const log = require('../../utils/createLogger')('dataPreparationService')
+const log = require('../../utils/createLogger')('dataPreparationService');
 const {bruteForceAccomodations2, bruteForceAccomodations3} = require('../../utils/bruteforcers');
 const {possibleCharacters} = require('../../dummyData/dummyData');
 const models = require('../../models/index');

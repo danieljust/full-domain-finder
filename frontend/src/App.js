@@ -14,10 +14,10 @@ class App extends Component {
                     <div className="App">
                         <DrawerUndockedExample/>
                         {/*<Route path="/posts/:postId" component={PostDetailed}/>*/}
-                        {/*<Route path="/find" component={getComponent('new')}/>*/}
+                        <Route path="/find" component={getComponent('domainFinder')}/>
                         {/*<Route path="/history" component={getComponent('comments')}/>*/}
                         <Route exact path="/" component={getComponent('mainPage')}/>
-                        {/*<Route path="/ask" component={getComponent('ask')}/>*/}
+                        <Route path="/profile" component={getComponent('profile')}/>
                         {/*<Route path="/jobs" component={getComponent('jobs')}/>*/}
                     </div>
                 </MuiThemeProvider>

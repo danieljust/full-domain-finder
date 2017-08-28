@@ -1,9 +1,6 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Link} from 'react-router-dom';
 import Avatar from 'material-ui/Avatar';
 import List from 'material-ui/List/List';
@@ -41,12 +38,14 @@ export default class DrawerUndockedExample extends React.Component {
                     <List>
                         <ListItem
                             disabled={true}
-                        >
+                        ><Link to="/profile">
+
                             <Avatar
                                 src="https://pp.userapi.com/c836630/v836630839/5f8ee/vW8wH4rArEo.jpg"
                                 size={100}
                                 style={{margin: 5}}
                             />
+                        </Link>
                         </ListItem>
                         <Divider/>
                         <Link to="/find" style={{textDecoration: 'none'}}>

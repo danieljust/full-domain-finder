@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodejs ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "amqplib": "^0.5.1",
@@ -25,7 +25,7 @@
     "promise-retry": "^1.1.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
-    "sequelize": "^4.2.1",
+    "sequelize": "^4.7.5",
     "static-favicon": "~1.0.0",
     "whois": "^2.3.9"
   }
