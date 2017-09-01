@@ -9,7 +9,7 @@ export default class DrawerUndockedExample extends React.Component {
     render() {
         return (
             <div>
-                <Paper zDepth={4}>Hello welcome to domain finder app</Paper>
+                <Paper elevation={4}>Hello welcome to domain finder app</Paper>
             </div>
         );
     }
